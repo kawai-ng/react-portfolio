@@ -134,9 +134,8 @@ body {
 
 .experience-content-wrapper {
     margin: 1em auto;
-    padding: 1em;
     width: 70%;
-    background-color: rgba(0,0,0,.15);
+    background-color: transparent;
 }
 
 .experience-nav-bar {
@@ -144,17 +143,90 @@ body {
 }
 
 .experience-nav-selection {
+    padding: 0.3em;
+    position: relative;
     width: 25%;
+    height: 6em;
     display: inline-block;
-    border-bottom: 1px solid black
+    box-sizing: border-box;
+    box-shadow: 10px 0 4px -4px rgba(0,0,0,.15);
 }
 
 .experience-nav-selection img {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s ease-in-out;
+}
+
+.experience-nav-selection:hover img {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.experience-nav-selection:hover .experience-nav-selection-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.experience-nav-selection-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.experience-nav-selection-overlay-text {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-family: 'Work Sans', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+#ucm, #ccsc {
+    box-shadow: 10px 0 4px -4px rgba(0,0,0,.15), -10px 0 4px -4px rgba(0,0,0,.15), 0 -10px 4px -4px rgba(0,0,0,.15) inset;
+}
+
+#null {
+    box-shadow: 0 -10px 4px -4px rgba(0,0,0,.15) inset;
+    background-color:#7f5e87;
+    z-index: 2;
+}
+
+#cambium, #cambium-card {
+    background-color: #c7b4cb;
+    z-index: 5;
+}
+
+#ucm, #ucm-card {
+    background-color: #b096b6;
+    z-index: 4;
+}
+
+#ccsc, #ccsc-card {
+    background-color: #9978a1;
+    z-index: 3;
+}
+
+#ucm-card {
+    display: none;
 }
 
 .experience-card {
+    padding: 1em;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .experience-card-header {
@@ -196,4 +268,5 @@ body {
     font-family: 'Space Mono', monospace;
     font-style: normal;
     font-weight: normal;
+    font-size: 0.75em;
 }
