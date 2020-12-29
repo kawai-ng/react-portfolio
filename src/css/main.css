@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+/* General Across Page */
+body {
+    overflow-x: hidden;
+}
+
+/* Hero Portion */
+.hero-wrapper {
+    background-image: url(../images/hero-background.jpg);
+    background-size: cover;
+    background-position: 0% 0%;
+
+    /* make hero cover full page */
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* flex display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-wrapper h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: 3em;
+    color: white;
+}
+
+/* Header / Navigation Bar Section */
+.header-wrapper {
+    background-color: #3E2C5E;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+}
+
+.header-title {
+    padding: 0.5em 1em;
+    display: inline-block;
+    width: 30%;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2em;
+    color: white;
+}
+
+.header-list {
+    display: inline-block;
+    width: 60%;
+    text-align: right;
+}
+
+.header-list a {
+    margin: 0 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.75em;
+    text-decoration: none;
+    color: white;
+}
+
+/* About Me Section */
+.about-wrapper {
+    padding: 0 5vw;
+    padding-bottom: 20vh;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #8e6996;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.about-wrapper h1 {
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.about-content-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.about-image-wrapper {
+    margin: 5vh 5vw;
+    padding: 1em;
+    width: 30%;
+}
+
+.about-image-wrapper img {
+    width: 100%;
+    box-shadow: 0 3em 3em rgba(0,0,0,.25);
+    border-radius: 5px;
+}
+
+.about-text-wrapper {
+    width: 50%;
+}
+
+.about-text-wrapper p {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+/* Experience Section */
+.experience-wrapper {
+    margin-top: 5vh;
+}
+
+.experience-wrapper h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.experience-content-wrapper {
+    margin: 1em auto;
+    padding: 1em;
+    width: 70%;
+    background-color: rgba(0,0,0,.15);
+}
+
+.experience-nav-bar {
+    width: 100%;
+}
+
+.experience-nav-selection {
+    width: 25%;
+    display: inline-block;
+    border-bottom: 1px solid black
+}
+
+.experience-nav-selection img {
+    width: 100%;
+}
+
+.experience-card {
+    width: 100%;
+}
+
+.experience-card-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.experience-card-header-title {
+    width: 50%;
+}
+
+.experience-card-header-title h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.experience-card-header-title p {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.experience-card-header-image {
+    width: 40%;
+}
+
+.experience-card-header-image img {
+    width: 100%;
+}
+
+.experience-card-content ul {
+    list-style-image: url(../images/rocket-bullet-resize.png);
+}
+
+.experience-card-content li {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+}
