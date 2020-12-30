@@ -4,7 +4,49 @@
 
 /* General Across Page */
 body {
+    background-color: #1e0033;
     overflow-x: hidden;
+}
+
+.section-heading-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.section-heading-wrapper h1 {
+    margin: 0;
+    padding: 1em 0;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+}
+
+.section-heading-underline {
+    width: 10%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border-bottom: 1px solid white;
+    transition: 0.4s ease-in-out;
+}
+
+.about-wrapper:hover .section-heading-underline {
+    width: 100%;
+    transition: 0.4s ease-in-out;
+}
+
+.experience-wrapper:hover .section-heading-underline {
+    width: 100%;
+    transition: 0.4s ease-in-out;
+}
+
+.skills-wrapper:hover .section-heading-underline {
+    width: 100%;
+    transition: 0.4s ease-in-out;
 }
 
 /* Hero Portion */
@@ -77,7 +119,6 @@ body {
     padding-bottom: 20vh;
     box-sizing: border-box;
     width: 100%;
-    background-color: #8e6996;
     color: white;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
@@ -99,13 +140,27 @@ body {
 .about-image-wrapper {
     margin: 5vh 5vw;
     padding: 1em;
+    position: relative;
     width: 30%;
 }
 
+.about-image-decoration {
+    content: "";
+    position: absolute;
+    border: 2px solid #9978a1;
+    width: 90%;
+    height: 90%;
+    top: -5%;
+    left: -5%;
+    z-index: 2;
+}
+
 .about-image-wrapper img {
+    position: relative;
     width: 100%;
     box-shadow: 0 3em 3em rgba(0,0,0,.25);
     border-radius: 5px;
+    z-index: 5;
 }
 
 .about-text-wrapper {
@@ -116,12 +171,19 @@ body {
     font-family: 'Space Mono', monospace;
     font-style: normal;
     font-weight: normal;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 /* Experience Section */
 .experience-wrapper {
     margin-top: 5vh;
+    padding-bottom: 10vh;
+    transition: 0.4s ease-in-out;
+}
+
+.experience-wrapper:hover {
+    border-bottom: 1px solid white;
+    transition: 0.4s ease-in-out;
 }
 
 .experience-wrapper h1 {
@@ -132,13 +194,37 @@ body {
     font-weight: bold;
 }
 
-.experience-content-wrapper {
-    margin: 1em auto;
-    width: 70%;
-    background-color: transparent;
+.experience-content-big-wrapper {
+    position: relative;
 }
 
-.experience-nav-bar {
+.experience-content-wrapper {
+    margin: 1em auto;
+    box-sizing: border-box;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #5c418b;
+    clip-path: polygon(0 0, 0 20%, 5% 30%, 5% 100%, 40% 100%, 45% 90%, 55% 90%, 60% 100%, 100% 100%, 
+    100% 10%, 95% 0, 70% 0, 65% 5%, 35% 5%, 30% 0, 100% 0);
+    color: white;
+    z-index: 2;
+}
+
+.experience-colorful-sidebar {
+    position: absolute;
+    bottom: -0.25em;
+    left: 10%;
+}
+
+.colorful-bar {
+    margin: 0.375em 0;
+    height: 0.75em;
+    width: 2.5em;
+    background-color: #5c418b;
+}
+
+.experience-nav {
+    margin-top: 2em;
     width: 100%;
 }
 
@@ -200,31 +286,31 @@ body {
 
 #null {
     box-shadow: 0 -10px 4px -4px rgba(0,0,0,.15) inset;
-    background-color:#7f5e87;
+    background-color: transparent;
     z-index: 2;
 }
 
 #cambium, #cambium-card {
-    background-color: #c7b4cb;
+    background-color: transparent;
     z-index: 5;
 }
 
 #ucm, #ucm-card {
-    background-color: #b096b6;
+    background-color: transparent;
     z-index: 4;
 }
 
 #ccsc, #ccsc-card {
-    background-color: #9978a1;
+    background-color: transparent;
     z-index: 3;
 }
 
-#ucm-card {
+#ucm-card, #ccsc-card {
     display: none;
 }
 
 .experience-card {
-    padding: 1em;
+    padding: 3em;
     width: 100%;
     box-sizing: border-box;
 }
@@ -250,6 +336,7 @@ body {
     font-family: 'Space Mono', monospace;
     font-style: normal;
     font-weight: normal;
+    font-size: 1em;
 }
 
 .experience-card-header-image {
@@ -268,5 +355,129 @@ body {
     font-family: 'Space Mono', monospace;
     font-style: normal;
     font-weight: normal;
-    font-size: 0.75em;
+    font-size: 1em;
+}
+
+/* Skills Section */
+.skills-wrapper {
+    margin-top: 10vh;
+}
+
+.skills-wrapper h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.programming-languages-wrapper {
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.programming-languages-title-wrapper {
+    margin: 0 2em;
+    padding: 1.5em;
+    background-color: #b096b6;
+    text-align: center;
+    box-sizing: border-box;
+    width: 25%;
+}
+
+.programming-languages-title-wrapper img {
+    width: 50%;
+}
+
+.programming-languages-title-wrapper h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+.programming-languages-bars-wrapper {
+    width: 40%;
+}
+
+.programming-languages-individual-bar-wrapper {
+    margin-bottom: 1em;
+    border: 1px solid #3E2C5E;
+}
+
+.programming-languages-individual-bar-title {
+    padding: 0.1em;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25%;
+    background-color: #3E2C5E;
+    color: white;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.programming-languages-individual-bar-colored {
+    display: inline-block;
+    width: 65%;
+}
+
+.programming-languages-individual-bar-colored span {
+    padding: 0.1em;
+    box-sizing: border-box;
+    display: block;
+    background-color: #baa5c0;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.percent-90-1 {
+    width: 90%;
+    animation-name: bubbling-bar-1;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bubbling-bar-1 {
+    0%  {width: 88%;}
+    25% {width: 90%;}
+    50% {width: 91%;}
+    75% {width: 90%;}
+}
+
+.percent-90-2 {
+    width: 90%;
+    animation-name: bubbling-bar-1;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bubbling-bar-1 {
+    0%  {width: 92%;}
+    25% {width: 90%;}
+    50% {width: 89%;}
+    65% {width: 90%;}
+    80% {width: 88%;}
+}
+
+.percent-80 {
+    width: 80%;
+}
+
+.programming-languages-individual-bar-percentage {
+    padding: 0.1em;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 10%;
+    background-color: #a487ab;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9em;
 }

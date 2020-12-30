@@ -4,10 +4,15 @@ import kawai_headshot from '../images/kawai-pic.jpg';
 export default function About() {
     return (
         <div className='about-wrapper'>
-            <h1>About</h1>
+            <div className='section-heading-wrapper'>
+                <h1>About</h1>
+                <div className='section-heading-underline'></div>
+            </div>
+
             <div className='about-content-wrapper'>
                 <div className='about-image-wrapper'>
                     <img src={kawai_headshot} alt='Headshot of Ka Wai'/>
+                    <div className='about-image-decoration'></div>
                 </div>
                 <div className='about-text-wrapper'>
                     <p>
