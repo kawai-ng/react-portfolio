@@ -1,4 +1,5 @@
 import React from 'react';
+import Pulse from 'react-reveal/Pulse';
 import kawai_headshot from '../images/kawai-pic.jpg';
 
 export default function About() {
@@ -11,7 +12,9 @@ export default function About() {
 
             <div className='about-content-wrapper'>
                 <div className='about-image-wrapper'>
-                    <img src={kawai_headshot} alt='Headshot of Ka Wai'/>
+                    <Pulse>
+                        <img src={kawai_headshot} alt='Headshot of Ka Wai'/>
+                    </Pulse>
                     <div className='about-image-decoration'></div>
                 </div>
                 <div className='about-text-wrapper'>

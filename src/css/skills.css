@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+/* Skills Section */
+.skills-wrapper {
+    margin-top: 10vh;
+}
+
+.skills-wrapper h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.programming-languages-wrapper, .frameworks-wrapper {
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.programming-languages-title-wrapper {
+    margin: 0 2em;
+    padding: 1em;
+    background-color: transparent;
+    border: 1px solid #b096b6;
+    text-align: center;
+    box-sizing: border-box;
+    width: 30%;
+    height: 0%;
+    clip-path: polygon(0 0, 0 70%, 30% 100%, 100% 100%, 100% 30%, 70% 0);
+}
+
+.programming-languages-title-inside-wrapper {
+    padding: 4em 1.5em;
+    background-color: #b096b6;
+    clip-path: polygon(0 0, 0 80%, 20% 100%, 100% 100%, 100% 20%, 80% 0);
+    min-height: 7em;
+}
+
+.programming-language-typetext-1 {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    font-family: 'Work Sans', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: 2.25em;
+    animation: typewriter 1s steps(60, end);
+}
+
+@keyframes typewriter {
+    0% {width: 0;}
+    100% {width: 80%;}
+}
+
+.programming-language-typetext-2 {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    font-family: 'Work Sans', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: 2.25em;
+    width: 0;
+    animation: typewriter2 1s steps(60, end);
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typewriter2 {
+    0% {width: 0;}
+    100% {width: 62.5%;}
+}
+
+.blinking-caret-1 {
+    font-family: 'Work Sans', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: 3em;
+    color: transparent;
+    animation: blinking-caret-1 1s steps(60, end);
+}
+
+@keyframes blinking-caret-1 {
+    0%, 100% {color: black;}
+    50% { color: transparent;}
+}
+
+.blinking-caret-2 {
+    font-family: 'Work Sans', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: 3em;
+    color: transparent;
+    animation: blinking-caret-2 1s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes blinking-caret-2 {
+    0%, 100% {color: black;}
+    50% { color: transparent;}
+}
+
+.programming-languages-bars-wrapper {
+    width: 40%;
+}
+
+.programming-languages-individual-bar-wrapper {
+    margin-bottom: 1em;
+    border: 1px solid #3E2C5E;
+}
+
+.programming-languages-individual-bar-title {
+    padding: 0.1em;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25%;
+    background-color: #3E2C5E;
+    color: white;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.programming-languages-individual-bar-colored {
+    display: inline-block;
+    width: 65%;
+}
+
+.programming-languages-individual-bar-colored span {
+    padding: 0.1em;
+    box-sizing: border-box;
+    display: block;
+    background-color: #baa5c0;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.percent-90-1 {
+    width: 90%;
+    animation: bubbling-bar-1 1.3s infinite;
+}
+
+@keyframes bubbling-bar-1 {
+    0%  {width: 88%;}
+    25% {width: 90%;}
+    50% {width: 91%;}
+    75% {width: 90%;}
+    100% {width: 89%;}
+}
+
+.percent-90-2 {
+    width: 90%;
+    animation: bubbling-bar-2 1s infinite;
+}
+
+@keyframes bubbling-bar-2 {
+    0%  {width: 92%;}
+    25% {width: 90%;}
+    50% {width: 89%;}
+    65% {width: 90%;}
+    80% {width: 88%;}
+}
+
+.percent-80 {
+    width: 80%;
+    animation: bubbling-bar-3 1.5s infinite;
+}
+
+@keyframes bubbling-bar-3 {
+    0%  {width: 80%;}
+    20% {width: 78%;}
+    35% {width: 80%;}
+    55% {width: 81%;}
+    70% {width: 80%;}
+    85% {width: 81%;}
+}
+
+.percent-65 {
+    width: 65%;
+    animation: bubbling-bar-4 0.6s infinite;
+}
+
+@keyframes bubbling-bar-4 {
+    0%  {width: 64%;}
+    20% {width: 64.5%;}
+    50% {width: 66.5%;}
+    75% {width: 66%;}
+    100% {width: 65%;}
+}
+
+.programming-languages-individual-bar-percentage {
+    padding: 0.1em;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 10%;
+    background-color: #a487ab;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.frameworks-title-wrapper {
+    margin: 0 2em;
+    padding: 1em;
+    padding-top: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #b096b6;
+    text-align: center;
+    box-sizing: border-box;
+    width: 30%;
+    height: 0%;
+}
+
+.frameworks-title-inside-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: #b096b6;
+    min-height: 6em;
+}
+
+.frameworks-title-screen-1 {
+    position: relative;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    animation: window-scroll 2s infinite;
+}
+
+@keyframes window-scroll {
+    0%  {display: none; bottom: -100%;}
+    50% {display: block; bottom: 0;}
+    100% {display: none; bottom: 100%};
+}
+
+.frameworks-title-screen-1-top, .frameworks-title-screen-2-top {
+    display: flex;
+}
+
+.frameworks-title-screen-1-top-left {
+    margin: 0 2em;
+    background-color: aqua;
+    width: 3em;
+    height: 3em;
+}
+
+.frameworks-title-screen-1-top-right {
+    width: 50%;
+}
+
+.frameworks-title-screen-1-top-right-line {
+    margin: 0.5em 0;
+    border: 1px solid black;
+}
+
+.frameworks-title-screen-1-bottom {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.frameworks-title-screen-1-bottom p {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-style: medium;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.frameworks-title-screen-2 {
+    position: absolute;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    animation: window-scroll 2s infinite;
+    animation-delay: 1s;
+}
+
+.frameworks-title-screen-2-top-left {
+    margin-left: 2em;
+    width: 3em;
+    height: 3em;
+}
+
+.frameworks-title-screen-2-top-left img {
+    width: 100%;
+}
+
+.frameworks-title-screen-2-top-right {
+    margin: 1em;
+    width: 60%;
+}
+
+.frameworks-title-progressbar {
+    width: 100%;
+    height: 1em;
+    border: 1.5px solid grey;
+}
+
+.frameworks-title-progressbar-colored {
+    width: 30%;
+    height: 100%;
+    background-color: #107C10;
+    /*animation: file-loading 5s infinite; */
+}
+
+@keyframes file-loading {
+    from {width: 20%;} to {width: 90%}
+}
+
+.frameworks-title-decoration img {
+    width: 100%;
+    height: 100%;
+}
