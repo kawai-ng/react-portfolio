@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+/* Project Section */
+.project-screen-wrapper {
+    margin: 1em auto;
+    padding: 2em 1em;
+    position: relative;
+    box-sizing: border-box;
+    width: 80%;
+    border: 0.5em solid #b096b6;
+    border-bottom: 1em solid #b096b6;
+    border-radius: 1em;
+    border-bottom-right-radius: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.project-screen-wrapper::after {
+    content: '';
+    position: absolute;
+    border: 0.5em solid #b096b6;
+    width: 70%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    right: -0.5em;
+    bottom: -2em;
+}
+
+.project-screen-left-wrapper {
+    width: 40%;
+}
+
+.project-screen-left-wrapper h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5em;
+}
+
+.project-screen-left-wrapper p {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.project-screen-right-wrapper {
+    width: 50%;
+}
+
+.project-image-wrapper {
+    padding: 1em;
+    padding-bottom: 0.25em;
+    display: flex;
+    border-bottom: 1px solid #d2c3d5;
+    box-sizing: border-box;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 97.5%, 85% 100%, 15% 100%, 0 97.5%);
+}
+
+.project-image {
+    margin: 0 auto;
+    padding: 1.5em 0;
+    width: 70%;
+}
+
+.project-image-wrapper img {
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.project-image-wrapper-left-border {
+    float: left;
+    width: 10% !important;
+}
+
+.project-image-wrapper-right-border {
+    float: right;
+    width: 10% !important;
+}
+
+.project-image-number-wrapper {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.project-image-number-wrapper img {
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
+    transition: 0.3s ease-in-out;
+}
+
+#previous-button:hover {
+    cursor: pointer;
+    transform: translateX(-10%);
+    transition: 0.3s ease-in-out;
+}
+
+#next-button:hover {
+    cursor: pointer;
+    transform: translateX(10%);
+    transition: 0.3s ease-in-out;
+}
+
+.project-image-number {
+    margin: 0.5em 0;
+    padding: 0 1.5em;
+    position: relative;
+    text-align: center;
+    background-image: linear-gradient(white, gray);
+    overflow: hidden;
+}
+
+.project-image-number p {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    font-family: 'Graduate', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25em;
+    color: black;
+}
+
+.project-number-current {
+    position: absolute;
+    top: 37.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+}
+
+.project-number-smaller {
+    position: absolute;
+    top: 37.5%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+}
+
+.project-number-larger {
+    position: absolute;
+    top: 37.5%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+}
+
+#previous-button {
+    opacity: 0;
+}
+
+.project-navigation-buttons-wrapper {
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.project-navigation-buttons-wrapper a {
+    margin-right: 1em;
+    border: 2px solid white;
+    border-image: linear-gradient(135deg, #bba5c0, #725478);
+    border-image-slice: 1;
+    padding: 0.25em 1em;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.project-navigation-buttons-wrapper a:hover {
+    background-image: linear-gradient(135deg, #bba5c0, #725478);
+    transition: 0.5s ease-in-out;
+}
+
+/* #FFDEF3*/

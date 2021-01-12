@@ -6,7 +6,7 @@ import file_icon from '../images/file-icon.png';
 
 export default function Skills() {
     return (
-        <div className='skills-wrapper'>
+        <div className='skills-wrapper' id='skills'>
             <div className='section-heading-wrapper'>
                 <h1>Skills</h1>
                 <div className='section-heading-underline'></div>
@@ -59,13 +59,13 @@ export default function Skills() {
 
                             <div className='programming-languages-individual-bar-wrapper'>
                                 <div className="programming-languages-individual-bar-title">Ruby</div>
-                                <div className="programming-languages-individual-bar-colored"><span className="percent-50">&nbsp;</span></div>
+                                <div className="programming-languages-individual-bar-colored"><span className="percent-50-1">&nbsp;</span></div>
                                 <div className="programming-languages-individual-bar-percentage">50%</div>
                             </div>
 
                             <div className='programming-languages-individual-bar-wrapper'>
                                 <div className="programming-languages-individual-bar-title">C</div>
-                                <div className="programming-languages-individual-bar-colored"><span className="percent-50">&nbsp;</span></div>
+                                <div className="programming-languages-individual-bar-colored"><span className="percent-50-2">&nbsp;</span></div>
                                 <div className="programming-languages-individual-bar-percentage">50%</div>
                             </div>
                         </div>
@@ -124,20 +124,86 @@ export default function Skills() {
                             </div>
 
                             <div className='programming-languages-individual-bar-wrapper'>
+                                <div className="programming-languages-individual-bar-title">Selenium</div>
+                                <div className="programming-languages-individual-bar-colored"><span className="percent-70">&nbsp;</span></div>
+                                <div className="programming-languages-individual-bar-percentage">70%</div>
+                            </div>
+
+                            <div className='programming-languages-individual-bar-wrapper'>
                                 <div className="programming-languages-individual-bar-title">Django</div>
-                                <div className="programming-languages-individual-bar-colored"><span className="percent-80">&nbsp;</span></div>
+                                <div className="programming-languages-individual-bar-colored"><span className="percent-40-1">&nbsp;</span></div>
                                 <div className="programming-languages-individual-bar-percentage">40%</div>
                             </div>
 
                             <div className='programming-languages-individual-bar-wrapper'>
                                 <div className="programming-languages-individual-bar-title">Ruby on Rails</div>
-                                <div className="programming-languages-individual-bar-colored"><span className="percent-80">&nbsp;</span></div>
+                                <div className="programming-languages-individual-bar-colored"><span className="percent-40-2">&nbsp;</span></div>
                                 <div className="programming-languages-individual-bar-percentage">40%</div>
                             </div>
 
                         </div>
                     </Fade>
                 </div>
+
+                <Fade>
+                    <div className='technologies-wrapper'>
+                        <h2>Other Technologies</h2>
+                        <div className='technologies-row-1'>
+                            <div className='technologies-status-1'>
+                                <p>Status: </p>
+                            </div>
+                            <div className='technologies-row-1-list-wrapper'>
+                                <div className='technologies-row-1-list-column'>
+                                    <ul>
+                                        <li>Amazon Web Services (AWS)</li>
+                                        <li className='column-row-2'>Search Engine Optimization (SEO)</li>
+                                        <li className='column-row-3'>Agile Methodologies</li>
+                                        <li className='column-row-4'>LINUX/UNIX Environments</li>
+                                        <li className='column-row-5'>JavaFX</li>
+                                        <li className='column-row-6'>Java Database Connectivity (JDBC)</li>
+                                        <li className='column-row-7'>Git Technologies</li>
+                                    </ul>
+                                </div>
+                                <div className='technologies-row-1-list-column'>
+                                    <ul>
+                                        <li>HTML5/CSS3</li>
+                                        <li className='column-row-2'>Figma</li>
+                                        <li className='column-row-3'>Canva</li>
+                                        <li className='column-row-4'>REST APIs</li>
+                                        <li className='column-row-5'>MySQL</li>
+                                        <li className='column-row-6'>JUnit Testing</li>
+                                        <li className='column-row-7'>Mockito</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Additional Skills</h2>
+                        <div className='technologies-row-1'>
+                            <div className='technologies-status-1'>
+                                <p>Status: </p>
+                            </div>
+                            <div className='technologies-row-1-list-wrapper'>
+                                <div className='technologies-row-1-list-column'>
+                                    <ul>
+                                        <li>Computer Networking</li>
+                                        <li className='column-row-2'>Game Design</li>
+                                        <li className='column-row-3'>Artificial Intelligence</li>
+                                        <li className='column-row-4'>Graph Theory</li>
+                                    </ul>
+                                </div>
+                                <div className='technologies-row-1-list-column'>
+                                    <ul>
+                                        <li>Algorithms</li>
+                                        <li className='column-row-2'>Data Structures</li>
+                                        <li className='column-row-3'>Discrete Structures</li>
+                                        <li className='column-row-4'>Ethical Hacking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Fade>
             </div>
         </div>
     )

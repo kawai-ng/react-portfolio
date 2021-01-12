@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 /* General Across Page */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #1e0033;
     overflow-x: hidden;
@@ -49,6 +53,11 @@ body {
     transition: 0.4s ease-in-out;
 }
 
+.projects-wrapper:hover .section-heading-underline {
+    width: 100%;
+    transition: 0.4s ease-in-out;
+}
+
 /* Hero Portion */
 .hero-wrapper {
     background-image: url(../images/hero-background.jpg);
@@ -72,14 +81,43 @@ body {
     font-weight: 500;
     font-size: 3em;
     color: white;
+    text-align: center;
 }
 
 /* Header / Navigation Bar Section */
 .header-wrapper {
-    background-color: #3E2C5E;
+    padding: 1em;
+    background-color: #2e2145;
     width: 100%;
     box-sizing: border-box;
-    position: sticky;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.header-fixed {
+    position: fixed;
+    float: left;
+    width: 100%;
+    z-index: 10;
+    animation: header-descend 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.header-hide {
+    float: left;
+    animation: header-ascend 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes header-descend {
+    0% {top: -50%;}
+    100% {top: 0;}
+}
+
+@keyframes header-ascend {
+    0% {top: 0;}
+    100% {top: -50%;}
 }
 
 .header-title {
@@ -93,14 +131,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
 }
 
 .header-list {
     display: inline-block;
-    width: 60%;
-    text-align: right;
+    width: 85%;
+    text-align: left;
 }
 
 .header-list a {
@@ -108,9 +146,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.75em;
+    font-size: 1.25em;
     text-decoration: none;
     color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.header-list a:hover {
+    color: #cdca98;
+    transition: 0.3s ease-in-out;
 }
 
 /* About Me Section */
@@ -174,188 +218,99 @@ body {
     font-size: 1em;
 }
 
-/* Experience Section */
-.experience-wrapper {
-    margin-top: 5vh;
-    padding-bottom: 10vh;
-    transition: 0.4s ease-in-out;
-}
+/* Experience Section is in the experience.css file*/
+/* Skills Section is in the skills.css file */
+/* Projects Section is in the projects.css file */
 
-.experience-wrapper:hover {
-    border-bottom: 1px solid white;
-    transition: 0.4s ease-in-out;
-}
-
-.experience-wrapper h1 {
-    margin: 0;
+/* Contact Section */
+.contact-wrapper {
+    margin-top: 20vh;
+    padding-top: 5em;
+    padding-bottom: 2.5em;
     text-align: center;
+    background-image: linear-gradient(135deg, #bba5c0, #725478);
+    clip-path: polygon(0 25%, 0 100%, 100% 100%, 100% 0);
+}
+
+.contact-wrapper h1 {
     font-family: 'Space Mono', monospace;
     font-style: normal;
     font-weight: bold;
-}
-
-.experience-content-big-wrapper {
-    position: relative;
-}
-
-.experience-content-wrapper {
-    margin: 1em auto;
-    box-sizing: border-box;
-    width: 80%;
-    border-radius: 10px;
-    background-color: #5c418b;
-    clip-path: polygon(0 0, 0 20%, 5% 30%, 5% 100%, 40% 100%, 45% 90%, 55% 90%, 60% 100%, 100% 100%, 
-    100% 10%, 95% 0, 70% 0, 65% 5%, 35% 5%, 30% 0, 100% 0);
+    font-size: 2em;
     color: white;
-    z-index: 2;
 }
 
-.experience-colorful-sidebar {
-    position: absolute;
-    bottom: -0.25em;
-    left: 10%;
+.contact-content-wrapper {
+    margin: 4em 0;
 }
 
-.colorful-bar {
-    margin: 0.375em 0;
-    height: 0.75em;
-    width: 2.5em;
-    background-color: #5c418b;
-}
-
-.experience-nav {
-    margin-top: 2em;
-    width: 100%;
-}
-
-.experience-nav-selection {
-    padding: 0.3em;
-    position: relative;
-    width: 25%;
-    height: 6em;
-    display: inline-block;
-    box-sizing: border-box;
-    box-shadow: 10px 0 4px -4px rgba(0,0,0,.15);
-}
-
-.experience-nav-selection img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: 0.3s ease-in-out;
-}
-
-.experience-nav-selection:hover img {
-    opacity: 0;
-    cursor: pointer;
-}
-
-.experience-nav-selection:hover .experience-nav-selection-overlay {
-    opacity: 1;
-    cursor: pointer;
-}
-
-.experience-nav-selection-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
-}
-
-.experience-nav-selection-overlay-text {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    font-family: 'Work Sans', sans-serif;
-    font-style: medium;
-    font-weight: 500;
+.contact-content-wrapper p {
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
     font-size: 1em;
+    color: white;
 }
 
-#ucm, #ccsc {
-    box-shadow: 10px 0 4px -4px rgba(0,0,0,.15), -10px 0 4px -4px rgba(0,0,0,.15), 0 -10px 4px -4px rgba(0,0,0,.15) inset;
+.contact-content-link-wrapper {
+    margin: 4em 0;
 }
 
-#null {
-    box-shadow: 0 -10px 4px -4px rgba(0,0,0,.15) inset;
-    background-color: transparent;
-    z-index: 2;
+.contact-content-wrapper a {
+    padding: 0.5em 1.5em;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25em;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
 }
 
-#cambium, #cambium-card {
-    background-color: transparent;
-    z-index: 5;
+.contact-content-wrapper a:hover {
+    background-color: white;
+    color: #bba5c0;
+    transition: 0.3s ease-in-out;
 }
 
-#ucm, #ucm-card {
-    background-color: transparent;
-    z-index: 4;
-}
-
-#ccsc, #ccsc-card {
-    background-color: transparent;
-    z-index: 3;
-}
-
-#ucm-card, #ccsc-card {
-    display: none;
-}
-
-.experience-card {
+/* Footer Section */
+.footer-wrapper {
     padding: 3em;
-    width: 100%;
-    box-sizing: border-box;
+    background-color: #262626;
+    text-align: center;
 }
 
-.experience-card-header {
-    width: 100%;
+.footer-content-icons-wrapper {
     display: flex;
     justify-content: center;
 }
 
-.experience-card-header-title {
+.footer-content-icons-wrapper img {
+    margin: 0 1em;
+    width: 3em;
+    height: 3em;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-content-icons-wrapper img:hover {
+    cursor: pointer;
+    transform: translateY(-10%);
+    transition: 0.3s ease-in-out;
+}
+
+.footer-divider {
+    margin: 1em auto;
+    margin-bottom: 0;
     width: 50%;
+    border: 1px solid #4d4d4d;
 }
 
-.experience-card-header-title h2 {
-    font-family: 'Work Sans', sans-serif;
-    font-style: medium;
-    font-weight: 500;
-    font-size: 1.5em;
-}
-
-.experience-card-header-title p {
-    font-family: 'Space Mono', monospace;
+.footer-content-wrapper p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: normal;
-    font-size: 1em;
+    font-weight: 400;
+    font-size: 0.9em;
 }
-
-.experience-card-header-image {
-    width: 40%;
-}
-
-.experience-card-header-image img {
-    width: 100%;
-}
-
-.experience-card-content ul {
-    list-style-image: url(../images/rocket-bullet-resize.png);
-}
-
-.experience-card-content li {
-    font-family: 'Space Mono', monospace;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1em;
-}
-
-/* Skills Section is in the skills.css file */

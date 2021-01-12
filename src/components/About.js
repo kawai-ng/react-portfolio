@@ -4,7 +4,7 @@ import kawai_headshot from '../images/kawai-pic.jpg';
 
 export default function About() {
     return (
-        <div className='about-wrapper'>
+        <div className='about-wrapper' id='about'>
             <div className='section-heading-wrapper'>
                 <h1>About</h1>
                 <div className='section-heading-underline'></div>

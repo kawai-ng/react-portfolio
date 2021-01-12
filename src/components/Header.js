@@ -1,18 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Header() {
+    const [sticky, setSticky] = useState(1000);
+    const [lastOffset, setLastOffset] = useState(0);
+
+    window.onscroll = function() {
+        if (document.getElementById('header') !== null) {
+            let navbar = document.getElementById('header');
+            let newOffset = window.pageYOffset;
+
+            if (window.pageYOffset >= sticky && newOffset < lastOffset) {
+                navbar.classList.add('header-fixed');
+                navbar.classList.remove('header-hide');
+                setLastOffset(newOffset);
+            }
+            else if (window.pageYOffset >= sticky && newOffset > lastOffset){
+                navbar.classList.add('header-hide');
+                navbar.classList.remove('header-fixed');
+                setLastOffset(newOffset);
+                console.log('we in here!')
+            }
+            else {
+                navbar.classList.remove('header-hide');
+                navbar.classList.remove('header-fixed');
+                setLastOffset(newOffset);
+            }
+        }
+        
+    };
+    
+    useEffect(() => {
+        setSticky(document.getElementById('header').offsetTop)
+    }, [])
+
     return (
-        <div className='header-wrapper'>
-            <div className='header-title'>
-                <h1>Ka Wai Ng</h1>
-            </div>
+        <div id='header' className='header-wrapper'>
             <div className='header-list'>
-                <a href='/'>About</a>
-                <a href='/'>Experience</a>
-                <a href='/'>Skills</a>
-                <a href='/'>Projects</a>
-                <a href='/'>Contact</a>
+                <a href='#about'>About</a>
+                <a href='#experience'>Experience</a>
+                <a href='#skills'>Skills</a>
+                <a href='#projects'>Projects</a>
+                <a href='#contact'>Contact</a>
             </div>
+            <button>Resume</button>
         </div>
     )
 }
