@@ -42,7 +42,7 @@ export default function Header() {
                 <a href='#projects'>Projects</a>
                 <a href='#contact'>Contact</a>
             </div>
-            <button>Resume</button>
+            <button onClick={() => window.open('https://drive.google.com/file/d/1pa3ampyJAKshOPVRCzip7dKmfvsBjO_T/view?usp=sharing', '_blank')}>Resume</button>
         </div>
     )
 }

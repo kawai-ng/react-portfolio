@@ -157,6 +157,26 @@ body {
     transition: 0.3s ease-in-out;
 }
 
+.header-wrapper button {
+    padding: 0.25em 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid #9978a1;
+    border-radius: 4px;
+    transition: 0.25s ease-in-out;
+}
+
+.header-wrapper button:hover {
+    cursor: pointer;
+    background-color: #9978a1;
+    color: white;
+    transition: 0.25s ease-in-out;
+}
+
 /* About Me Section */
 .about-wrapper {
     padding: 0 5vw;
